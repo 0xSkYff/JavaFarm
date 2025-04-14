@@ -7,8 +7,14 @@ public class Animal {
     private int animalIdentificationNumber;
     private static int counter;
 
+
     public Animal(@NotNull String name) {
+        System.out.println("Animal constructor");
         setName(name);
+    }
+
+    static {
+        System.out.println("Static constructor");
     }
 
     public String getName() {
@@ -31,4 +37,6 @@ public class Animal {
     public String toString() {
         return String.format("[%s] %s, Number %d", getClass().getSimpleName(), name, animalIdentificationNumber);
     }
+
+
 }
