@@ -20,11 +20,17 @@ public class Main {
 
         System.out.println(farm1);
 
-        Animal a3 = new Animal("kay");
+        Animal a3 = new Animal("Kay");
 
         farm1.addAnimal(a3);
 
         System.out.println(farm1);
+
+        Collections.sort(listAnimals);
+        System.out.println(listAnimals);
+
+
+        Animal animal = new Animal("");
 
     }
 }
