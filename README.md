@@ -1,6 +1,15 @@
-# Simple farm with animals and crops made in Java 
+# Project under construction... 👷🚧🏗️
 
-## Types of crops
+## Farm management system using Java ☕
+
+### Type of crops 🌾
 	- Vegetables
 	- Fruits
 	- Cereals
+
+### Type of farms 🤠🚜
+    - 
+
+
+### Type of animals 🐴
+    -
