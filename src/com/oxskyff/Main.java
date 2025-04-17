@@ -11,9 +11,9 @@ public class Main {
     public static void main(String[] args) {
 
        List<Animal> listAnimals = new ArrayList<>(
-                List.of(new Animal("Leo")
-                , new Animal("Bobby")
-                , new Animal("Sun"))
+                List.of(new Animal("Leo", (byte) 28)
+                , new Animal("Bobby", (byte) 1)
+                , new Animal("Sun", (byte) 7))
         );
 
         Farm farm1 = new Farm("Sky's Farm", listAnimals);
@@ -30,7 +30,16 @@ public class Main {
         System.out.println(listAnimals);
 
 
-        Animal animal = new Animal("");
+
+        List<Animal> animalsFarm1 = farm1.getAnimals();
+
+        for (int i = 0; i <= farm1.getAnimalCount(); i++) {
+            System.out.printf("%s is %d, hence %s%n", animalsFarm1.get(i).getName(), animalsFarm1.get(i).getAnimalAge(),
+                    (animalsFarm1.get(i).getAnimalAge() < 1 ?
+                            "it is a baby" : (animalsFarm1.get(i).getAnimalAge() < 8) ?
+                            "It is a child" : (animalsFarm1.get(i).getAnimalAge() >= 9) ?
+                            "It is an adult" : ""));
+        }
 
     }
 }

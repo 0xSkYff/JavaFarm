@@ -6,10 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Farm {
+    ////////////////////////////////////////////////////FIELDS//////////////////////////////////////////////////////////////////////////////////////
+
     private String name;
     private List<Animal> animals;
     private int animalCount;
     // TODO: Add the list of crops
+
+    /////////////////////////////////////////////////////CONSTRUCTORS//////////////////////////////////////////////////////////////////////////////
 
     public Farm(String name) {
         this.name = name;
@@ -22,6 +26,8 @@ public class Farm {
         countAnimals(animals);
     }
 
+    ////////////////////////////////////////////////////METHODS//////////////////////////////////////////////////////////////////////////////
+
     private void countAnimals(List<Animal> animals) {
         animalCount += animals.size();
     }
@@ -31,10 +37,23 @@ public class Farm {
         animals.add(animal);
     }
 
+    ///////////////////////////////////////////////////GETTERS AND SETTERS//////////////////////////////////////////////////////////////////////////
+
     public String getNameFarm() {
         return name;
     }
 
+    public int getAnimalCount() {
+        return animalCount;
+    }
+
+    public List<Animal> getAnimals() {
+        return animals;
+    }
+
+    ///////////////////////////////////////////////OVERRIDE METHODS////////////////////////////////////////////////////////////////////////////////
+
+    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(name + "\n");
@@ -43,5 +62,7 @@ public class Farm {
         }
         return sb.toString();
     }
+
+
 
 }
