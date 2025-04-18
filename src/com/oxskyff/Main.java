@@ -1,11 +1,9 @@
 package com.oxskyff;
 
 import com.oxskyff.animal.Animal;
+import com.oxskyff.animal.AnimalComparator;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,12 +19,15 @@ public class Main {
         System.out.println(farm1);
 
         Animal a3 = new Animal("Kay");
+        Animal a4 = new Animal("Alba");
+        Animal a5 = new Animal("Xerneas");
+        farm1.addAnimal(a4);
+
 
         farm1.addAnimal(a3);
-
+farm1.addAnimal(a5);
         System.out.println(farm1);
 
-        Collections.sort(listAnimals);
         System.out.println(listAnimals);
 
 
@@ -41,5 +42,26 @@ public class Main {
                             "It is an adult" : ""));
         }
 
+       // System.out.println(a3.compareTo("Marcos"));
+
+        AnimalComparator ac1 = new AnimalComparator();
+        List<Animal> animals2 = farm1.getAnimals();
+        animals2.sort(ac1);
+        System.out.println(animals2);
+
+
+
+        Collections.sort(listAnimals, Collections.reverseOrder());
+        System.out.println(listAnimals);
+
+        int[] numbers =  {1,23,2,1,323,1213,123,31};
+        for (int number : numbers) {
+            System.out.println(number);
+        }
+
+       Animal a7 = new Animal("A", (byte)21);
+        Animal a8 = new Animal("A", (byte) 22);
+        System.out.println(a7.equals(a8));
+        System.out.println(a7 == a8);
     }
 }
