@@ -2,6 +2,10 @@ package com.oxskyff;
 
 import com.oxskyff.animal.Animal;
 import com.oxskyff.animal.AnimalComparator;
+import com.oxskyff.animal.Horse;
+import com.oxskyff.animal.Rabbit;
+
+import java.util.HashMap;
 
 import java.util.*;
 
@@ -63,5 +67,28 @@ farm1.addAnimal(a5);
         Animal a8 = new Animal("A", (byte) 22);
         System.out.println(a7.equals(a8));
         System.out.println(a7 == a8);
+
+        HashMap<String, String> nicknames = new HashMap<>();
+
+        nicknames.put("Matthew", "Matt");
+        nicknames.put("Michael", "Mix");
+        nicknames.put("Arthur", "Artie");
+
+        System.out.println(nicknames.get("Matthew"));
+        System.out.println(nicknames.get("Matt"));
+
+        System.out.println(a7.equals(null));
+
+
+
+        Animal animal1 = new Horse("White");
+        Animal animal2 = new Rabbit("Bunny");
+
+        System.out.println(animal1.getClass() == animal2.getClass());
+
+    Animal animal3 = new Animal("Perl");
+    Rabbit rabbit = new Rabbit("Perl");
+        System.out.println(rabbit.equals(animal3));
+        System.out.println(animal3.equals(rabbit));
     }
 }

@@ -74,10 +74,14 @@ public class Animal implements Comparable<Animal>, Comparator<Animal> {
     // An animal can be the same if it's name and id is the same.
     @Override
     public boolean equals(Object o) {
+        // If you want to deal with the parent and just the parent don't use instanceof
+        // if (o == null ) return false; if (this.getClass() != o.getClass()) return false;
         if (this == o) return true;
+        // Check not just if it's of the same type, but  also returns false if it's null, but it is not good for subclasses if they don't override their method.
         if (!(o instanceof Animal)) return false;
+
         Animal animal = (Animal) o;
-        if (animal.name.equals(this.name) && animal.animalIdentificationNumber == this.animalIdentificationNumber ) return true;
+        if (animal.name.equals(this.name) ) return true;
         return false;
     }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
